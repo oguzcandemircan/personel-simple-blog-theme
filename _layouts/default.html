@@ -1,0 +1,48 @@
+{% include header.html %}
+<main class="container-fluid h-100">
+    <div class="row">
+        <div id="sidebar" class="col-3 hidden-md-down">
+            <div class="row justify-content-center text-center mt-4">
+                <div class="overlay"></div>
+                <div class="col-md-12 profile">
+                    <img src="/assets/images/oguzcan-demircan.jpg" alt="Oğuzcan Demircan" >
+                </div>
+                <h4 class="mt-1 b-black">Oğuzcan Demircan</h4>
+                <div class="col-12"></div>
+                <h6 class="b-black">Software Developer</h6>
+                <div class="col-12"></div>
+                <div class="social-media b-black">
+                        <a target="_blank" href="https://github.com/{{ site.social-network-links.github }}"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://twitter.com/{{ site.social-network-links.twitter }}"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://medium.com/@{{ site.social-network-links.medium }}"><i class="fab fa-medium"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/@{{ site.social-network-links.medium }}"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a target="_blank" href="https://gitlab.com/{{ site.social-network-links.gitlab }}"><i class="fab fa-gitlab"></i></a> -->
+                </div>
+                <!-- <div class="col-12" style="background-color:#000;padding: 10px;position: absolute;top: 0px;">
+                    "Eğer kendi hayalinizi inşa etmezseniz, başkası sizi kendi hayalini inşa etmeniz için işe alacaktır"
+                </div> -->
+                <div class="col-12" style="background-color:#000;padding: 10px;position: absolute;bottom: 0px;">
+                    © 2018-2019 Oğuzcan Demircan All Rights Reserved
+                </div>
+            </div>
+        </div>
+        <div id="content" class="col-9 offset-3" style="margin-top:20px;">
+            <div class="col-md-6 ml-5">
+                <div class="sub-nav">
+                    {% for nav in site.navs %}
+                        {% if  nav.url == page.url  %}
+                            <a href="{{ nav.url }}" class="active" >{{ nav.name }}</a>
+                        {% else %}
+                            <a href="{{ nav.url }}">{{ nav.name }}</a>
+                        {% endif %} 
+                    {% endfor %}
+                </div>
+                {{ content }} 
+                <div class="footer">
+                    © 2018-2019 Oğuzcan Demircan All Rights Reserved 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% include footer.html %}

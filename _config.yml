@@ -1,0 +1,32 @@
+meta:
+    author: Oğuzcan Demircan
+    owner: Oğuzcan Demircan
+    generator: Oğuzcan Demircan
+    description: " description"
+    keywords: "oguzcandemircan, oğuzcan demircan, developer, backend, laravel, php, yazılım, açık kaynak, software developer, open source, vue js, javascript"
+
+default_language: tr
+
+permalink: :title
+
+navs:
+-
+  name: home
+  url: /
+-
+  name: posts
+  url: /posts
+- 
+    name: about
+    url: /about
+-
+    name: contact
+    url: /contact
+
+social-network-links:
+    twitter: oguzcandemircan
+    github: oguzcandemircan
+    gitlab: oguzcandemircan
+    medium: oguzcandemircan
+    linkedin: oguzcandemircan
+    email: "demircanoguzcan@gmail.com"
