@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Laravel Stub Generator"
+tags: [books, test]
 ---
 
 If you discover any security related issues, please email author email instead of using the issue tracker.
