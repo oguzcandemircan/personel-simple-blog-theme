@@ -4,5 +4,15 @@ layout: default
 <article class="post-detail mt-4">
     <h2>{{ page.title }}</h2>
     <p>{{ page.content }}</p>
-    <span>{{ page.date | date: "%-d %B %Y" }}</span>
+    <div class="tags">
+        <ul>
+            {% for tag in page.tags %}
+            <li><a href="#"><span>{{ tag }}</span></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="date">
+        <br>
+        <span>{{ page.date | date: "%-d %B %Y" }}</span>
+    </div>
 </article>

@@ -1,16 +1,32 @@
 {% include header.html %}
 <main class="container-fluid h-100">
     <div class="row">
-        {% include sidebar.html %}
-        <div id="content" class="col-9 offset-3" style="margin-top:20px;">
-            <div class="col-12 ml-5">
-                <div class="sub-nav">
-                    <!-- <a href="/" class="active" >Go Home</a> -->
+       {% include sidebar.html %}
+        <div id="content" class="col-lg-9 offset-lg-3" style="margin-top:20px;">
+            <div class="row justify-content-center justify-content-lg-start">
+                <div class="col-lg-12 col-10 left-space">
+                    {{ content }} 
+                    <div class="footer">
+                        © 2018-2019 Oğuzcan Demircan All Rights Reserved 
+                    </div>
                 </div>
-                {{ content }} 
-                <div class="footer text-center">
-                    <!-- © 2018-2019 Oğuzcan Demircan All Rights Reserved  -->
-                </div>
+                <!-- <div class="col-5 post ml-5">
+                    <h2>Most Read Posts</h2>
+                    <div class="ul">
+                        <li>
+                            <a href="/">foo</a>
+                            <a href="/">foo</a>
+                            <a href="/">foo</a>
+                            <a href="/">bar</a>
+                            <a href="/">bar</a>
+                            <a href="/">bar</a>
+                            <a href="/">baz</a>
+                            <a href="/">baz</a>
+                            <a href="/">baz</a>
+                            <a href="/">baz</a>
+                        </li>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

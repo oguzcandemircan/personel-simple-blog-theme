@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
     
         
-            <a href="/posts" class="active" >posts</a>
+            <a href="/posts">posts</a>
         
     
 </div>
@@ -441,50 +441,137 @@ document.addEventListener('DOMContentLoaded', function() {
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">home</a></li>
         
-        <li class="breadcrumb-item active" aria-current="page"></li>
+        <li class="breadcrumb-item"><a href="#">software</a></li>
+        
+        <li class="breadcrumb-item"><a href="#">php</a></li>
+        
+        <li class="breadcrumb-item"><a href="#">laravel</a></li>
+        
+        <li class="breadcrumb-item active" aria-current="page">laravel stub generator</li>
     </ol>
 </nav> -->
-                    
-<article class="post">
-    <a href="Laravel-Stub-Generator">
-        <h2>Laravel Stub Generator</h2>
-        <p>If you discover any security related issues, please email author email instead of using the issue tracker.</p>
+                    <article class="post-detail mt-4">
+    <h2>Laravel Stub Generator</h2>
+    <p><p>If you discover any security related issues, please email author email instead of using the issue tracker.</p>
 
+<p>This is where your description should go. Take a look at <a href="contributing.md">contributing.md</a> to see a to do list.</p>
 
-    </a>
-    <span>31 December 2014</span>
-</article>
+<h2 id="installation">Installation</h2>
 
-<article class="post">
-    <a href="new-years-eve-is-awesome">
-        <h2>Stop Thinking And Start Doing</h2>
-        <p>Get out of your head. Every good decision starts with a momment of action. What are you going to do today!</p>
+<p>Via Composer</p>
 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>composer require oguzcandemircan/laravel-stub-generator
+</code></pre></div></div>
 
-    </a>
-    <span>31 December 2013</span>
-</article>
+<h2 id="config">Config</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="p">[</span>
+    <span class="s1">'source_path'</span> <span class="o">=&gt;</span> <span class="nx">storage_path</span><span class="p">(</span><span class="s1">'stubs/source'</span><span class="p">),</span> <span class="c1">// stubs source path</span>
+    <span class="s1">'target_path'</span> <span class="o">=&gt;</span> <span class="nx">storage_path</span><span class="p">(</span><span class="s1">'stubs/target'</span><span class="p">),</span> <span class="c1">// stubs target path</span>
+<span class="p">];</span>
+</code></pre></div></div>
 
-<article class="post">
-    <a href="new-years-eve-is-awesome">
-        <h2>Stop Thinking And Start Doing</h2>
-        <p>Get out of your head. Every good decision starts with a momment of action. What are you going to do today!</p>
+<h2 id="usage">Usage</h2>
 
+<p>Stub file:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//storage/stubs/source/model.stub</span>
 
-    </a>
-    <span>31 December 2012</span>
-</article>
+<span class="k">namespace</span> <span class="p">;</span>
 
-<article class="post">
-    <a href="new-years-eve-is-awesome">
-        <h2>Stop Thinking And Start Doing</h2>
-        <p>Get out of your head. Every good decision starts with a momment of action. What are you going to do today!</p>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
 
+<span class="k">class</span>  <span class="nc">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-    </a>
-    <span>31 December 2011</span>
-</article>
- 
+<p>Generate:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">LaravelStubGenerator</span><span class="o">::</span><span class="na">source</span><span class="p">(</span><span class="s1">'model'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">params</span><span class="p">([</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'UserModel'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'App\Models'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s2">"'name', 'email', 'age'"</span><span class="p">,</span>
+<span class="p">])</span><span class="o">-&gt;</span><span class="na">generate</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Save:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">LaravelStubGenerator</span><span class="o">::</span><span class="na">source</span><span class="p">(</span><span class="s1">'model'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">params</span><span class="p">([</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'UserModel'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'App\Models'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s2">"'name', 'email', 'age'"</span><span class="p">,</span>
+<span class="p">])</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="s1">'UserModel.php'</span><span class="p">);</span>
+
+<span class="c1">// force save</span>
+<span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="s1">'UserModel.php'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//storage/stubs/target/UserModel.php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">UserModel</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'name'</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Download:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">LaravelStubGenerator</span><span class="o">::</span><span class="na">source</span><span class="p">(</span><span class="s1">'model'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">params</span><span class="p">([</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'UserModel'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'App\Models'</span><span class="p">,</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s2">"'name', 'email', 'age'"</span><span class="p">,</span>
+<span class="p">])</span><span class="o">-&gt;</span><span class="na">download</span><span class="p">(</span><span class="s1">'UserModel.php'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="change-log">Change log</h2>
+
+<p>Please see the <a href="changelog.md">changelog</a> for more information on what has changed recently.</p>
+
+<h2 id="testing">Testing</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>composer <span class="nb">test</span>
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Please see <a href="contributing.md">contributing.md</a> for details and a todolist.</p>
+
+<h2 id="security">Security</h2>
+
+<p>If you discover any security related issues, please email author email instead of using the issue tracker.</p>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+  <li><a href="https://github.com/oguzcandemircan">Oğuzcan Demircan</a></li>
+  <li><a href="../../contributors">All Contributors</a></li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>license. Please see the <a href="license.md">license file</a> for more information.</p>
+
+</p>
+    <div class="tags">
+        <ul>
+            
+            <li><a href="#"><span>php</span></a></li>
+            
+            <li><a href="#"><span>larave</span></a></li>
+            
+            <li><a href="#"><span>software</span></a></li>
+            
+        </ul>
+    </div>
+    <div class="date">
+        <br>
+        <span>31 December 2014</span>
+    </div>
+</article> 
                     <div class="mt-4">
                         © 2018-2019 Oğuzcan Demircan All Rights Reserved 
                     </div>

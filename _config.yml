@@ -1,12 +1,11 @@
 meta:
+    title: Oğuzcan Demircan
     author: Oğuzcan Demircan
     owner: Oğuzcan Demircan
     generator: Oğuzcan Demircan
-    # docker, sql ve nosql veri tabanları, performans optimizasyonu, ci/cd ve verimlilik artıran geliştirici araçları ile ilgili yazılar.
-    # My thoughts about Programming, Coffee, Bags and various other stuff
-    # Programlama, Kahve, Çanta ve diğer çeşitli şeyler hakkındaki düşüncelerim
-    description: "Laravel, php, vuejs, "
-    keywords: "oguzcandemircan, oğuzcan demircan, laravel, developer, backend, php, yazılım, açık kaynak, software developer, open source, vue js, javascript"
+    description: laravel, php, vuejs, javascript etc. my thinking about programming languages, frameworks, technologies, and various other things.
+    description: laravel, php, vuejs, javascript vb. programlama dilleri, frameworkleri, teknolojileri ve diğer çeşitli şeyler hakkındaki düşüncelerim.
+    keywords: oguzcandemircan, oğuzcan demircan, laravel, developer, backend, php, yazılım, açık kaynak, software developer, open source, vue js, javascript, yazılım geliştirici, geliştirici
 
 default_language: tr
 
