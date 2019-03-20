@@ -8,7 +8,7 @@ comments: true
     <div class="tags">
         <ul>
             {% for tag in page.tags %}
-            <li><a href="#"><span>{{ tag }}</span></a></li>
+            <li><a href="{{ site.url }}/tags#{{ tag }}"><span>{{ tag }}</span></a></li>
             {% endfor %}
         </ul>
     </div>
@@ -16,10 +16,7 @@ comments: true
         <br>
         <span>{{ page.date | date: "%-d %B %Y" }}</span>
     </div>
+    <hr>
+    <div class="disqus-comments"> {% include disqus.html %} </div>
 </article>
 
-<hr>
-
-<div class="disqus-comments">
-    {% include disqus.html %}
-</div>

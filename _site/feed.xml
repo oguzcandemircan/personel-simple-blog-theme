@@ -12,42 +12,9 @@
           
           If you discover any security related issues, please email author email instead of using the issue tracker. This is where your description should go. Take a look at contributing.md to see a to do list. Installation Via Composer $ composer require oguzcandemircan/laravel-stub-generator Config return [ 'source_path' =&amp;gt; storage_path('stubs/source'), // stubs...
         </description>
-        <pubDate>Wed, 31 Dec 2014 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/Laravel-Stub-Generator</link>
-        <guid isPermaLink="true">http://localhost:4000/Laravel-Stub-Generator</guid>
-      </item>
-    
-      <item>
-        <title>Stop Thinking And Start Doing</title>
-        <description>
-          
-          Get out of your head. Every good decision starts with a momment of action. What are you going to do today! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus diam, sit amet sollicitudin dui. Praesent erat dui, mattis sed elementum non, molestie et ipsum. Quisque fringilla vitae...
-        </description>
-        <pubDate>Tue, 31 Dec 2013 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/new-years-eve-is-awesome</link>
-        <guid isPermaLink="true">http://localhost:4000/new-years-eve-is-awesome</guid>
-      </item>
-    
-      <item>
-        <title>Stop Thinking And Start Doing</title>
-        <description>
-          
-          Get out of your head. Every good decision starts with a momment of action. What are you going to do today! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus diam, sit amet sollicitudin dui. Praesent erat dui, mattis sed elementum non, molestie et ipsum. Quisque fringilla vitae...
-        </description>
-        <pubDate>Mon, 31 Dec 2012 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/new-years-eve-is-awesome</link>
-        <guid isPermaLink="true">http://localhost:4000/new-years-eve-is-awesome</guid>
-      </item>
-    
-      <item>
-        <title>Stop Thinking And Start Doing</title>
-        <description>
-          
-          Get out of your head. Every good decision starts with a momment of action. What are you going to do today! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus diam, sit amet sollicitudin dui. Praesent erat dui, mattis sed elementum non, molestie et ipsum. Quisque fringilla vitae...
-        </description>
-        <pubDate>Sat, 31 Dec 2011 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/new-years-eve-is-awesome</link>
-        <guid isPermaLink="true">http://localhost:4000/new-years-eve-is-awesome</guid>
+        <pubDate>Sun, 18 Mar 2018 00:00:00 +0300</pubDate>
+        <link>http://localhost:4000/software/php/laravel/2018/03/18/alt-yapi/</link>
+        <guid isPermaLink="true">http://localhost:4000/software/php/laravel/2018/03/18/alt-yapi/</guid>
       </item>
     
   </channel>

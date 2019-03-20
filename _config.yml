@@ -1,29 +1,29 @@
 meta:
-    title: Oğuzcan Demircan
-    author: Oğuzcan Demircan
-    owner: Oğuzcan Demircan
-    generator: Oğuzcan Demircan
-    description: laravel, php, vuejs, javascript etc. my thinking about programming languages, frameworks, technologies, and various other things.
-    description: laravel, php, vuejs, javascript vb. programlama dilleri, frameworkleri, teknolojileri ve diğer çeşitli şeyler hakkındaki düşüncelerimi içeren blog.
-    keywords: oguzcandemircan, oğuzcan demircan, laravel, developer, backend, php, yazılım, açık kaynak, software developer, open source, vue js, javascript, yazılım geliştirici, geliştirici
+  title: Oğuzcan Demircan
+  author: Oğuzcan Demircan
+  owner: Oğuzcan Demircan
+  generator: Oğuzcan Demircan
+  # description: laravel, php, vuejs, javascript etc. my thinking about programming languages, frameworks, technologies, and various other things.
+  description: laravel, php, vuejs, javascript vb. programlama dilleri, frameworkleri, teknolojileri ve diğer çeşitli şeyler hakkındaki düşüncelerimi içeren blog.
+  keywords: oguzcandemircan, oğuzcan demircan, laravel, developer, backend, php, yazılım, açık kaynak, software developer, open source, vue js, javascript, yazılım geliştirici, geliştirici
 
 default_language: tr
 
-permalink: :title
+permalink: pretty
 
 navs:
--
-  name: home
+- name: home
   url: /
--
-  name: posts
+
+- name: posts
   url: /posts
-# - 
-#     name: about
-#     url: /about
-# -
-#     name: contact
-#     url: /contact
+- name: tags
+  url: /tags
+# - name: about
+#   url: /about
+
+# - name: contact
+#   url: /contact
 
 social-network-links:
     twitter: oguzcandemircan
@@ -36,3 +36,12 @@ social-network-links:
 disqus:
   active: true
   username: oguzcandemircan
+
+loader: 
+    active: false
+    text: "Oğuzcan Demrican"
+
+
+url: "http://127.0.0.1" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap

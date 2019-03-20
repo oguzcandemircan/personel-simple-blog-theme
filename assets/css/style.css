@@ -1,7 +1,7 @@
 @import url('/assets/css/font.css');
 @import url('/assets/css/bootstrap.min.css');
 @import url('/assets/css/loader.css');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('/assets/css/highlight.css');
 @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
 html,body {
@@ -182,7 +182,7 @@ div.highlight {
     }
 }
 
-
+/* Tags */
 .tags ul {
 	margin: 0;
 	padding: 0;
