@@ -4,7 +4,7 @@ meta:
     owner: Oğuzcan Demircan
     generator: Oğuzcan Demircan
     description: laravel, php, vuejs, javascript etc. my thinking about programming languages, frameworks, technologies, and various other things.
-    description: laravel, php, vuejs, javascript vb. programlama dilleri, frameworkleri, teknolojileri ve diğer çeşitli şeyler hakkındaki düşüncelerim.
+    description: laravel, php, vuejs, javascript vb. programlama dilleri, frameworkleri, teknolojileri ve diğer çeşitli şeyler hakkındaki düşüncelerimi içeren blog.
     keywords: oguzcandemircan, oğuzcan demircan, laravel, developer, backend, php, yazılım, açık kaynak, software developer, open source, vue js, javascript, yazılım geliştirici, geliştirici
 
 default_language: tr
@@ -32,3 +32,7 @@ social-network-links:
     medium: oguzcandemircan
     linkedin: oguzcandemircan
     email: "demircanoguzcan@gmail.com"
+
+disqus:
+  active: true
+  username: oguzcandemircan
