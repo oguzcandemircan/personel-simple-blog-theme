@@ -1,6 +1,6 @@
 {% include header.html %}
 <main class="container-fluid h-100">
-    {% if site.loader %}
+    {% if site.loader == true %}
     <div class="loader-background row">
         <div id='loader'></div>
         <h1>{{ site.loader.text }}</h1>
@@ -17,6 +17,22 @@
                         © 2018-2019 Oğuzcan Demircan All Rights Reserved 
                     </div>
                 </div>
+                <!-- <div class="col-lg-5" style="position:fixed; right: 0px;">
+                    <div class="col-lg-6 float-right">
+                        {% for post in site.posts %}
+                        <article class="post">
+                            <a href="{{ post.url | remove_first:'/'}}">
+                                <h2>{{ post.title }}</h2>
+                                <img src="{{ post.image }}" alt="{{ post.title }}" />
+                                {{ post.description | strip_html }}
+                            </a>
+                            <br>
+                            <br>
+                            <span>{{ post.date | date: "%-d %B %Y" }}</span>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

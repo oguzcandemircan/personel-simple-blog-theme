@@ -10,8 +10,17 @@
     <meta name="author" content="{{ site.meta.author }}" />
     <meta name="owner" content="{{ site.meta.owner }}" />
     <meta name="generator" content="{{ site.meta.generator }}">
+    
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% else%}
     <meta name="description" content="{{ site.meta.description }}">
+    {% endif %}
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% else%}
     <meta name="keywords" content="{{ site.meta.keywords }}">
+    {% endif %}
 
     <!--  Style CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">

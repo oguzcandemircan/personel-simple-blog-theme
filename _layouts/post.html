@@ -4,19 +4,20 @@ comments: true
 ---
 <article class="post-detail mt-4">
     <h2>{{ page.title }}</h2>
-    <p>{{ page.content }}</p>
+    <p>
+        <img src="{{ page.image }}" alt="{{ page.title }}" />
+        {{ page.content }}
+    </p>
     <div class="tags">
         <ul>
             {% for tag in page.tags %}
-            <li><a href="{{ site.url }}/tags#{{ tag }}"><span>{{ tag }}</span></a></li>
+            <li><a href="{{ site.url }}/tags#{{ tag }}" title="{{ tag }}"><span>{{ tag }}</span></a></li>
             {% endfor %}
         </ul>
     </div>
     <div class="date">
-        <br>
         <span>{{ page.date | date: "%-d %B %Y" }}</span>
     </div>
     <hr>
     <div class="disqus-comments"> {% include disqus.html %} </div>
 </article>
-

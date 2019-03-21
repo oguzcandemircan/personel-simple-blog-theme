@@ -30,6 +30,32 @@ a:focus {
     text-decoration: none;
 }
 
+
+
+h1,h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    border-top: 3px dotted #f2f2f2 !important;
+    margin-top: 3rem; 
+    margin-bottom: 3rem; 
+}
+
+blockquote {
+    background: #f2f2f2;
+    padding: 15px 30px;
+    border-left: solid 2px #443b3b;
+    /* background: #64B5F6; */
+}
+
+blockquote p {
+    /* color: #fff!important; */
+    font-style: italic;
+    font-size: 18px !important;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -92,12 +118,6 @@ a:focus {
     overflow-y: auto;
 }
 
-.post h2,
-.post-detail h2 {
-    font-weight: 600;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-}
-
 .post-detail p a {
     /* color: #000; */
     background-repeat: repeat-x;
@@ -112,6 +132,12 @@ a:focus {
 .post-detail p a:hover {
     /* text-decoration: underline; */
     color: #000;
+}
+
+.post-detail img, img {
+    width: 100%;
+    margin: 1rem 0;
+    border: solid 1px #f2f2f2;
 }
 
 /* -------------------------------------------------
@@ -202,7 +228,9 @@ div.highlight {
 	background-color: #000;
 	border-radius: 0 3px 3px 0;
 	color: #fff;
-	font-size: 13px;
+    font-size: 15px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    /* font-family: monospace */
 	text-decoration: none;
 	-webkit-transition: .2s;
 	transition: .2s;
@@ -251,6 +279,7 @@ div.highlight {
 
 .post-detail .date {
     text-align: right;
+    margin-top: 3rem;
 }
 
 .post-detail .date:hover {

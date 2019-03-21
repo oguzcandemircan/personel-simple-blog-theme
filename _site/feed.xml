@@ -7,14 +7,25 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Yeni nesil geliştirme ortamı Docker ! 3 / 1</title>
+        <description>
+          
+          Docker Nedir ? Docker çeşitli sanallaştırma ortamları Virtual box ve benzerlerine alternatif uygulama geliştirme ve yayınlama alt yapı aracıdır. Not: bu makalede Docker ve Docker teknojisinden ziyade. Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz. Docker ve Docker...
+        </description>
+        <pubDate>Sat, 24 Mar 2018 00:00:00 +0300</pubDate>
+        <link>http://localhost:4000/yeni-nesil-gelistirme-ortami</link>
+        <guid isPermaLink="true">http://localhost:4000/yeni-nesil-gelistirme-ortami</guid>
+      </item>
+    
+      <item>
         <title>Laravel Stub Generator</title>
         <description>
           
-          If you discover any security related issues, please email author email instead of using the issue tracker. This is where your description should go. Take a look at contributing.md to see a to do list. Installation Via Composer $ composer require oguzcandemircan/laravel-stub-generator Config return [ 'source_path' =&amp;gt; storage_path('stubs/source'), // stubs...
+          Laravel Echo Server — How To Dennis SminkBlockedUnblockFollowFollowing Jun 6, 2018 In my opinion, real-time apps are the future. Socket servers usually were not that easy to setup, but Laravel Echo Server changes this. In this article, I’ll briefly show you how to quickly whip up a working socket server and broadcast events...
         </description>
         <pubDate>Sun, 18 Mar 2018 00:00:00 +0300</pubDate>
-        <link>http://localhost:4000/software/php/laravel/2018/03/18/alt-yapi/</link>
-        <guid isPermaLink="true">http://localhost:4000/software/php/laravel/2018/03/18/alt-yapi/</guid>
+        <link>http://localhost:4000/alt-yapi</link>
+        <guid isPermaLink="true">http://localhost:4000/alt-yapi</guid>
       </item>
     
   </channel>
