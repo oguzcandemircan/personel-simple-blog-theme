@@ -1,10 +1,11 @@
-@import url('/assets/css/font.css');
+/* @import url('/assets/css/font.css'); */
 @import url('/assets/css/bootstrap.min.css');
 @import url('/assets/css/loader.css');
 @import url('/assets/css/highlight.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&subset=latin-ext');
 @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
-html,body {
+html, body {
     height: 100%;
 }
 
@@ -13,14 +14,15 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: medium-content-serif-font, serif;
-    line-height: 1.42857143;
+    line-height: 1.7em!important;
     color: #333;
     background-color: #fff;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 p {
-    line-height: 1.7em;
+    line-height: 1.7em!important;
+    /* font-family: medium-content-serif-font, serif !important; */
 }
 
 a,
@@ -30,30 +32,31 @@ a:focus {
     text-decoration: none;
 }
 
-
-
-h1,h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 hr {
-    border-top: 3px dotted #f2f2f2 !important;
+    border-top: 3px dotted var(--open-white) !important;
     margin-top: 3rem; 
     margin-bottom: 3rem; 
 }
 
 blockquote {
-    background: #f2f2f2;
+    background: var(--open-white);
     padding: 15px 30px;
     border-left: solid 2px #443b3b;
-    /* background: #64B5F6; */
 }
 
 blockquote p {
-    /* color: #fff!important; */
     font-style: italic;
     font-size: 18px !important;
+}
+
+:root{
+
+    --open-white: #f2f2f2;
+    /* --sidebar-img:"/assets/images/mountains.jpg" */
 }
 
 /* ---------------------------------------------------
@@ -119,7 +122,7 @@ blockquote p {
 }
 
 .post-detail p a {
-    /* color: #000; */
+    
     background-repeat: repeat-x;
     /* background-image: linear-gradient(to right,rgba(0,0,0,.84) 100%,rgba(0,0,0,0) 0); */
     background-image: linear-gradient(to right,currentColor 100%,currentColor 0);
@@ -130,14 +133,13 @@ blockquote p {
 }
 
 .post-detail p a:hover {
-    /* text-decoration: underline; */
     color: #000;
 }
 
 .post-detail img, img {
     width: 100%;
     margin: 1rem 0;
-    border: solid 1px #f2f2f2;
+    border: solid 1px var(--open-white);
 }
 
 /* -------------------------------------------------
@@ -147,7 +149,6 @@ blockquote p {
     display: inline-block;
     margin-right: 10px;
     line-height: 30px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     letter-spacing: 2pt;
     text-decoration: none;
     color: #b6b6b6;
@@ -184,7 +185,7 @@ div.highlight {
     padding:5px 20px;
     padding-top:20px;
     margin: 20px 0;
-    border: solid 1px #f2f2f2;
+    border: solid 1px var(--open-white);
 }
 
 /* Media Queries */
@@ -229,7 +230,6 @@ div.highlight {
 	border-radius: 0 3px 3px 0;
 	color: #fff;
     font-size: 15px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     /* font-family: monospace */
 	text-decoration: none;
 	-webkit-transition: .2s;

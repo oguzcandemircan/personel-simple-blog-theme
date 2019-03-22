@@ -4,7 +4,7 @@ comments: true
 ---
 <article class="post-detail mt-4">
     <h2>{{ page.title }}</h2>
-    <p>
+    <p class="content">
         <img src="{{ page.image }}" alt="{{ page.title }}" />
         {{ page.content }}
     </p>
@@ -16,7 +16,13 @@ comments: true
         </ul>
     </div>
     <div class="date">
-        <span>{{ page.date | date: "%-d %B %Y" }}</span>
+        <!-- <span>{{ page.date | date: "%-d %B %Y" }}</span> -->
+        <span title="{{ page.date | date: '%d/%m/%Y' }}">
+            {{ page.date | date: "%-d" }}
+            {% assign m = page.date | date: "%-m" | minus: 0 %}
+            {{ site.data.locale.tr.date.month_names[m] }}
+            {{ page.date | date: "%Y" }}
+        </span>
     </div>
     <hr>
     <div class="disqus-comments"> {% include disqus.html %} </div>

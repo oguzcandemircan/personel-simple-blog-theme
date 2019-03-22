@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Yeni nesil geliştirme ortamı Docker ! 3 / 1
+title:  Yeni nesil geliştirme ortamı Docker !
 description: "Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz."
 keywords: docker, laradock, laravel, php, geliştirme ortamı
 image: /assets/posts/1/docker.png
@@ -35,17 +35,33 @@ Docker Container, Docker imajlarımızın (görüntülerimizin) çalıştırıld
 
 ----
 
-#### Peki Biz Geliştiriciler İçin Ne Anlam İfade Ediyor ?
+### Peki Docker Bunu Nasıl Yapıyor  / Nasıl Çalışıyor ?
+
+Dockerfile( Dosya ), Docker Image( Görüntü ) ve Docker Container( Konteyner )ları ile.
+
+Docker, Dockerfile da tanımlanan gereklilikleri `docker build .` komutu ile
+yeni bir Docker İmajı oluşturup içerisine,
+ Dockerfile da tanımladığımız komutları tek tek çalıştırıp, gerekliliklerin kurulumlarını gerçekleştiriyor. 
+ Sistemin çalışır halde olduğunu onayladıktan daha sonra
+sistemin yediğini yani imajını (image) alıp saklıyor. Hazırlanıp saklanan imajları
+
+`docker images` komutu ile görüntüleyebiliriz.
+
+`docker run {çalıştırmak_istediğimiz_imaj_idsi}` komut ile de imajını aldığımız sistemleri Docker Konteynerına koyup çalıştırıyor.
+Hali hazırda çalışan komutları
+`docker ps` komutu ile görüntüleyebiliriz.
+
+`docker ps -a` komutu ile daha önce çalıştırılmış fakat şuanda çalışmayan konteynerları görüntüleyebiliriz.
+
+----
+
+#### Biz Geliştiriciler İçin Docker Ne Anlam İfade Ediyor ?
 
 Geliştirdiğimiz herhangi bir uygulamayı yayına alırken kendi bilgisayarımızda çalışırken
 sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde " benim bilgisayarımda çalışıyordu " sendromundan kurtuluyoruz. :)
-
 Çünkü Docker sunucu ve çalışma ortamınızı eşitliyor. Kulağa hoş geliyor değil mi ?
 
-Peki bunu nasıl yapıyor ? Dockerfile, Docker Image( Görüntü ) ve Docker Container( Konteyner )ları ile 
-
-<!-- Peki bunu nasıl yapıyor ? -->
-----
+---
 
 ### Basit Bir Örnek Yapalım
 

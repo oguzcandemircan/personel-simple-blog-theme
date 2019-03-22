@@ -1,12 +1,3 @@
----
-layout: post
-title:  "Laravel Stub Generator"
-description: des
-keywords: key, words
-tags: [php, laravel, software]
-categories: [software, php, laravel ]
----
-
 Laravel Echo Server — How To
 ============================
 
