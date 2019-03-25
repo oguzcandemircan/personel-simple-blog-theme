@@ -20,8 +20,8 @@ navs:
   url: /posts 
 - name: etiketler
   url: /tags
-# - name: about
-#   url: /about
+- name: about
+  url: /about
 
 # - name: contact
 #   url: /contact
@@ -43,6 +43,6 @@ loader:
     text: "Oğuzcan Demrican"
 
 
-url: "http://127.0.0.1" # the base hostname & protocol for your site
+url: "https://oguzcandemircan.com" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap

@@ -35,7 +35,7 @@ Docker Container, Docker imajlarımızın (görüntülerimizin) çalıştırıld
 
 ----
 
-### Peki Docker Bunu Nasıl Yapıyor  / Nasıl Çalışıyor ?
+#### Peki Docker Bunu Nasıl Yapıyor  / Nasıl Çalışıyor ?
 
 Dockerfile( Dosya ), Docker Image( Görüntü ) ve Docker Container( Konteyner )ları ile.
 
@@ -60,6 +60,29 @@ Hali hazırda çalışan komutları
 Geliştirdiğimiz herhangi bir uygulamayı yayına alırken kendi bilgisayarımızda çalışırken
 sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde " benim bilgisayarımda çalışıyordu " sendromundan kurtuluyoruz. :)
 Çünkü Docker sunucu ve çalışma ortamınızı eşitliyor. Kulağa hoş geliyor değil mi ?
+
+---
+
+### Docker Kurulumu
+
+```bash
+#!/usr/bin/env bash
+
+# https://docs.docker.com/install/linux/docker-ce/ubuntu/
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+
+# https://docs.docker.com/compose/install/
+sudo curl -L https://github.com/docker/compose/releases/download/1.20.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# https://docs.docker.com/install/linux/linux-postinstall/
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
 
 ---
 
