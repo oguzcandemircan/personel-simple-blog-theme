@@ -8,14 +8,12 @@
     {% endif %}
     <div class="row">
        {% include sidebar.html %}
-        <div id="content" class="col-lg-9 offset-lg-3" style="margin-top:20px;">
+        <div id="content" class="col-lg-9 offset-lg-3">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-lg-6 col-10 left-space">
                     {% include navbar.html %}
-                    {{ content }} 
-                    <div class="mt-4">
-                        © 2018-2019 Oğuzcan Demircan All Rights Reserved 
-                    </div>
+                    {{ content }}
+                    <div class="mt-4">{{ site.footer.text }}</div>
                 </div>
                 <!-- <div class="col-lg-5" style="position:fixed; right: 0px;">
                     <div class="col-lg-6 float-right">
@@ -37,4 +35,12 @@
         </div>
     </div>
 </main>
+<script>
+var nav = document.getElementsByClassName('sub-nav')[0];
+var cond = nav.getElementsByClassName('active').length;
+if(cond == 0) {
+    var el = document.getElementById('makaleler').setAttribute('class', 'active');
+    console.log(el);
+}
+</script>
 {% include footer.html %}

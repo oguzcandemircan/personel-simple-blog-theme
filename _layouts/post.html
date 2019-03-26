@@ -2,11 +2,10 @@
 layout: default
 comments: true
 ---
-<article class="post-detail mt-4">
+<article class="post-detail mt-4" id="article">
     <h2>{{ page.title }}</h2>
-    <span class="time">
+    <span class="time" id="time">
         <i class="far fa-clock"></i>
-        3 dk okuma süresi
     </span>
     <p class="content">
         <img src="{{ page.image }}" alt="{{ page.title }}" />
@@ -20,7 +19,6 @@ comments: true
         </ul>
     </div>
     <div class="date">
-        <!-- <span>{{ page.date | date: "%-d %B %Y" }}</span> -->
         <span title="{{ page.date | date: '%d/%m/%Y' }}">
             {{ page.date | date: "%-d" }}
             {% assign m = page.date | date: "%-m" | minus: 0 %}
@@ -31,3 +29,15 @@ comments: true
     <hr>
     <div class="disqus-comments"> {% include disqus.html %} </div>
 </article>
+
+<script>
+function readTime(source, target){
+    var text = document.getElementById(source).innerText;
+    var minutes = Math.floor(text.split(' ').length / 150 )
+    if(minutes === 0) {
+        minutes = 1
+    }
+    document.getElementById(target).innerHTML = minutes + " dk okuma süresi"
+}
+readTime('article', 'time');
+</script>

@@ -16,12 +16,12 @@ navs:
 - name: anasayfa
   url: /
 
-- name: gönderiler
-  url: /posts 
+- name: makaleler
+  url: /makaleler 
 - name: etiketler
-  url: /tags
-- name: about
-  url: /about
+  url: /etiketler
+- name: Hakkımda
+  url: /hakkimda
 
 # - name: contact
 #   url: /contact
@@ -46,3 +46,11 @@ loader:
 url: "https://oguzcandemircan.com" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
+
+author: 
+  name: Oğuzcan Demircan
+  image: /assets/images/oguzcan-demircan.jpg
+  title: Software Developer
+
+footer:
+  text: © 2018-2019 Oğuzcan Demircan All Rights Reserved

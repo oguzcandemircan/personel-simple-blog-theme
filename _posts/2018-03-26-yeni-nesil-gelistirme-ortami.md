@@ -3,7 +3,7 @@ layout: post
 title:  Yeni nesil geliştirme ortamı Docker !
 description: "Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz."
 keywords: docker, laradock, laravel, php, geliştirme ortamı
-image: /assets/posts/1/docker.png
+image: /assets/posts/1/docker.jpg
 tags: [laradock, laravel, software, php, geliştirme ortamı, yazılım]
 categories: [docker]
 ---
@@ -55,7 +55,7 @@ Hali hazırda çalışan komutları
 
 ----
 
-#### Biz Geliştiriciler İçin Docker Ne Anlam İfade Ediyor ?
+### Biz Geliştiriciler İçin Docker Ne Anlam İfade Ediyor ?
 
 Geliştirdiğimiz herhangi bir uygulamayı yayına alırken kendi bilgisayarımızda çalışırken
 sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde " benim bilgisayarımda çalışıyordu " sendromundan kurtuluyoruz. :)
@@ -65,20 +65,27 @@ sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde "
 
 ### Docker Kurulumu
 
-```bash
-#!/usr/bin/env bash
+Kurumu Linux üzerinden anlatacağım diğer işletim sistemleri için docker dökümantasyonunda ki kurulum adımlarını takip edebilirsiniz.
 
+[Windows](https://docs.docker.com/docker-for-windows/install/)   - [Mac](https://docs.docker.com/docker-for-mac/install/)
+
+Docker kurulumu:
+```bash
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 sudo apt-get update
 sudo apt-get install docker-ce
-
+```
+Docker Compose kurulumu:
+```bash
 # https://docs.docker.com/compose/install/
 sudo curl -L https://github.com/docker/compose/releases/download/1.20.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
+```
+Herhangi bir izin problemiyle karşılaşmamak için. "docker" kullanıcı grubu oluşturuyoruz ve mevcut kullanıcımızı oluşturduğumuz "docker" kullanıcı grubuna atıyoruz.
+```bash
 # https://docs.docker.com/install/linux/linux-postinstall/
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -115,10 +122,13 @@ echo "<h1>Hello World</h1>" > www/index.html
 Dockerfile oluşturalım. Ve içerisine aşağıdaki komutları yazalım.
 
 ```dockerfile
-FROM nginx
+# nginx imajını referans alıyoruz.
+FROM nginx 
 
+# www klasörümüzü Docker konteyner içerisinde ki /usr/share/nginx/html içerisine kopyalıyoruz.
 COPY /www /usr/share/nginx/html
 
+# Docker konteynerımızın içerisindeki 80 portunu dışarıya açıyoruz.
 EXPOSE 80
 ```
 

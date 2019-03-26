@@ -110,6 +110,11 @@ i {
     padding: 20px;
 }
 
+#content .left-space {
+    margin-top:20px;
+    margin-left: 2rem;
+}
+
 /* -------------------------------------------------
     POST STYLE
 ---------------------------------------------------- */
@@ -170,16 +175,30 @@ i {
     color: #333337;
 }
 
+.sub-nav {
+    /* border-bottom: 3px dashed var(--open-white) !important; */
+    /* padding-bottom: 1rem; */
+    margin-bottom: 30px; 
+}
+
+.post:first-of-type {
+    padding-top: 0px!important;
+}
+
 .footer {
     padding: 20px 0 ;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0px;
+    background-color:#000;
+    padding: 10px;
 }
 
 /* -------------------------------------------------
     HELPERS
 ---------------------------------------------------- */
-#content .left-space {
-    margin-left: 3rem;
-}
 
 .b-black {
     background:#000;color: #fff; padding: 5px;
@@ -203,11 +222,6 @@ div.highlight {
 
     #content .left-space {
         margin-left: 0px!important;
-    }
-    .col-lg-3 {
-        /* flex: 0 0 25% !important; */
-        /* -ms-flex: 0 0 25% !important; */
-        /* max-width: 25% !important; */
     }
     .copyright {
         bottom: -24px!important;
@@ -311,4 +325,19 @@ ul li {
 
 .post div {
     margin-bottom: 2rem;
+}
+
+.post .post-date:hover {
+    text-decoration: underline;
+    /* cursor: pointer; */
+}
+
+.post div a p:hover {
+    text-decoration: underline;
+}
+
+.post:hover {
+    -webkit-box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
+    -moz-box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
+    box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
 }
