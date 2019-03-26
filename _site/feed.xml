@@ -7,7 +7,7 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Yeni nesil geliştirme ortamı Docker !</title>
+        <title>Yeni nesil geliştirme ortamı Bölüm 1: Docker</title>
         <description>
           
           Docker Nedir ? Docker çeşitli sanallaştırma ortamları Virtual box ve benzerlerine alternatif uygulama geliştirme ve yayınlama alt yapı aracıdır. Not: bu makalede Docker ve Docker teknojisinden ziyade. Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz. Docker ve Docker...

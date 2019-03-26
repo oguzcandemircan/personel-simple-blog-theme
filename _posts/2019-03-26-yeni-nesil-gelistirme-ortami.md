@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Yeni nesil geliştirme ortamı Docker !
+title:  "Yeni nesil geliştirme ortamı Bölüm 1: Docker"
 description: "Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz."
 keywords: docker, laradock, laravel, php, geliştirme ortamı
 image: /assets/posts/1/docker.jpg
