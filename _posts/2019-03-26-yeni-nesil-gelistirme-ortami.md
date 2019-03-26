@@ -25,32 +25,29 @@ Dockerfile geliştirdiğimiz uygulamamızın / yazılımın gerekliklerinin ( ö
 
 #### Docker Image Nedir ?
 
-Docker image, Dockerfile da tanımladığımız gerekliliklerin görüntüsüdür.
+Docker image, Dockerfile da tanımladığımız gerekliliklerin  görüntüsüdür.
 
 ---
 
 #### Docker Container Nedir ?
 
-Docker Container, Docker imajlarımızın (görüntülerimizin) çalıştırıldığı alandır.
+Docker Container, Docker imajlarımızın (image) çalıştırıldığı alandır.
 
 ----
 
 #### Peki Docker Bunu Nasıl Yapıyor  / Nasıl Çalışıyor ?
 
-Dockerfile( Dosya ), Docker Image( Görüntü ) ve Docker Container( Konteyner )ları ile.
-
 Docker, Dockerfile da tanımlanan gereklilikleri `docker build .` komutu ile
 yeni bir Docker İmajı oluşturup içerisine,
  Dockerfile da tanımladığımız komutları tek tek çalıştırıp, gerekliliklerin kurulumlarını gerçekleştiriyor. 
- Sistemin çalışır halde olduğunu onayladıktan daha sonra
-sistemin yediğini yani imajını (image) alıp saklıyor. Hazırlanıp saklanan imajları
+ Sistemin çalışır halde olduğunu onayladıktan sonra
+sistemin yedeğini yani imajını (image) alıp saklıyor. Hazırlanıp saklanan imajları
 
 `docker images` komutu ile görüntüleyebiliriz.
 
 `docker run {çalıştırmak_istediğimiz_imaj_idsi}` komut ile de imajını aldığımız sistemleri Docker Konteynerına koyup çalıştırıyor.
-Hali hazırda çalışan komutları
+Hali hazırda çalışan imajları 
 `docker ps` komutu ile görüntüleyebiliriz.
-
 `docker ps -a` komutu ile daha önce çalıştırılmış fakat şuanda çalışmayan konteynerları görüntüleyebiliriz.
 
 ----
@@ -65,7 +62,7 @@ sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde "
 
 ### Docker Kurulumu
 
-Kurumu Linux üzerinden anlatacağım diğer işletim sistemleri için docker dökümantasyonunda ki kurulum adımlarını takip edebilirsiniz.
+Kurulumu Linux üzerinden anlatacağım diğer işletim sistemleri için docker dökümantasyonunda ki kurulum adımlarını takip edebilirsiniz.
 
 [Windows](https://docs.docker.com/docker-for-windows/install/)   - [Mac](https://docs.docker.com/docker-for-mac/install/)
 
@@ -143,9 +140,9 @@ docker ps
 Aşığıdakine benzer bir çıktı almalısınız.
 ![docker ps çıktısı](/assets/posts/1/docker-ps.png)
 
-Oluşturduğumuz görüntüyü çalıştırıyoruz.
+Oluşturduğumuz imajı çalıştırıyoruz.
 ```bash
-#Oluşturduğumuz görüntüyü(image) çalıştırıyoruz.
+#Oluşturduğumuz imajı(image) çalıştırıyoruz.
 docker run -p 81:80 oguzcandemircan/nginx:1.0 
 
 #curl istek atıyoruz.
@@ -162,5 +159,6 @@ Herhangi bir sorun ile karşılaşmadıysanız aşağıda ki çıktıyı almalı
 ### Sonuç
 
 Bu makalede **Docker**, **Dockerfile**, **Docker Image**, **Docker Container** nedir ? Nasıl
-çalışır ? Öğrenmiş olduk. Basit bir örnekle öğrendiklerimizi uygulamaya dökerek pekiştirdik.
-Bir sonraki makele de **Docker Compose** ile oluşturduğumuz konteynerları yönetme konusuna değineceğim. Nedir ? Nasıl çalışır ?
+çalışır ? Öğrenmiş olduk. Basit bir örnekle öğrendiklerimizi uygulamaya dökerek pekiştirdik. 
+4 bölümlük " yeni nesil geliştirme ortamı " serisinin 1. bölümünü tamamlamış olduk.
+Bir sonraki bölümde **Docker Compose** ile oluşturduğumuz konteynerları yönetme konusuna değineceğiz.

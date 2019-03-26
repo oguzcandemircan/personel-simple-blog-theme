@@ -19,7 +19,7 @@
     
 
     <!--  Style CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
 
     <!-- FEED XML -->
     <link rel="alternate" type="application/rss+xml" title="Oğuzcan Demircan" href="/feed.xml" />
@@ -41,31 +41,35 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    
+    <script async src="/assets/js/custom.js"></script>
 </head>
 <body>
 <main class="container-fluid h-100">
     
-    <div class="row">
+    <div class="row" id="wrapper">
        <div id="sidebar" class="col-lg-3 hidden-md-down">
     <div class="row justify-content-center text-center mt-4">
         <div class="overlay"></div>
         <div class="col-12">
-            <img class="profile-img" src="http://localhost:4000//assets/images/oguzcan-demircan.jpg" alt="Oğuzcan Demircan" >
+            <a href="http://localhost:4000">
+                <img class="profile-img" src="http://localhost:4000//assets/images/oguzcan-demircan.jpg" alt="Oğuzcan Demircan" >
+            </a>
         </div>
-        <h4 class="mt-1 b-black">Oğuzcan Demircan</h4>
+        <h4 class="mt-1 b-black"><a href="http://localhost:4000">Oğuzcan Demircan</a></h4>
         <div class="col-12"></div>
-        <h6 class="b-black">Software Developer</h6>
+        <h6 class="b-black"><a href="http://localhost:4000"> Software Developer </a></h6>
         <div class="col-12"></div>
         <div class="social-media b-black">
-                <a target="_blank" href="https://github.com/oguzcandemircan"><i class="fab fa-github"></i></a>
-                <a target="_blank" href="https://twitter.com/oguzcandemircan"><i class="fab fa-twitter"></i></a>
-                <a target="_blank" href="https://medium.com/@oguzcandemircan"><i class="fab fa-medium"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/@oguzcandemircan"><i class="fab fa-linkedin"></i></a>
-                <!-- <a target="_blank" href="https://gitlab.com/oguzcandemircan"><i class="fab fa-gitlab"></i></a> -->
+                <a target="_blank" title="Github" href="https://github.com/oguzcandemircan"><i class="fab fa-github"></i></a>
+                <a target="_blank" title="Twitter" href="https://twitter.com/oguzcandemircan"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" title="Medium" href="https://medium.com/@oguzcandemircan"><i class="fab fa-medium"></i></a>
+                <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/@oguzcandemircan"><i class="fab fa-linkedin"></i></a>
+                <!-- <a target="_blank" title="Gitlab" href="https://gitlab.com/oguzcandemircan"><i class="fab fa-gitlab"></i></a> -->
+                <!-- <a target="_blank" title="Email" href="mailto:oguzcandemircan"><i class="fas fa-envelope"></i></a> -->
         </div>
         <div class="col-12 copyright">
-            © 2018-2019 Oğuzcan Demircan All Rights Reserved
+            © 2019 Oğuzcan Demircan All Rights Reserved
         </div>
     </div>
 </div>
@@ -104,11 +108,9 @@
 </nav> -->
                     <article class="post-detail mt-4" id="article">
     <h2>Yeni nesil geliştirme ortamı Docker !</h2>
-    <span class="time" id="time">
-        <i class="far fa-clock"></i>
-    </span>
-    <p class="content">
-        <img src="/assets/posts/1/docker.jpg" alt="Yeni nesil geliştirme ortamı Docker !" />
+    <span class="time" id="time"></span>
+    <img src="/assets/posts/1/docker.jpg" alt="Yeni nesil geliştirme ortamı Docker !" />
+    <div class="content">
         <h4 id="docker-nedir-">Docker Nedir ?</h4>
 
 <p>Docker çeşitli sanallaştırma ortamları Virtual box ve benzerlerine alternatif uygulama
@@ -128,33 +130,30 @@ geliştirme ve yayınlama alt yapı aracıdır.</p>
 
 <h4 id="docker-image-nedir-">Docker Image Nedir ?</h4>
 
-<p>Docker image, Dockerfile da tanımladığımız gerekliliklerin görüntüsüdür.</p>
+<p>Docker image, Dockerfile da tanımladığımız gerekliliklerin  görüntüsüdür.</p>
 
 <hr />
 
 <h4 id="docker-container-nedir-">Docker Container Nedir ?</h4>
 
-<p>Docker Container, Docker imajlarımızın (görüntülerimizin) çalıştırıldığı alandır.</p>
+<p>Docker Container, Docker imajlarımızın (image) çalıştırıldığı alandır.</p>
 
 <hr />
 
 <h4 id="peki-docker-bunu-nasıl-yapıyor---nasıl-çalışıyor-">Peki Docker Bunu Nasıl Yapıyor  / Nasıl Çalışıyor ?</h4>
 
-<p>Dockerfile( Dosya ), Docker Image( Görüntü ) ve Docker Container( Konteyner )ları ile.</p>
-
 <p>Docker, Dockerfile da tanımlanan gereklilikleri <code class="highlighter-rouge">docker build .</code> komutu ile
 yeni bir Docker İmajı oluşturup içerisine,
  Dockerfile da tanımladığımız komutları tek tek çalıştırıp, gerekliliklerin kurulumlarını gerçekleştiriyor. 
- Sistemin çalışır halde olduğunu onayladıktan daha sonra
-sistemin yediğini yani imajını (image) alıp saklıyor. Hazırlanıp saklanan imajları</p>
+ Sistemin çalışır halde olduğunu onayladıktan sonra
+sistemin yedeğini yani imajını (image) alıp saklıyor. Hazırlanıp saklanan imajları</p>
 
 <p><code class="highlighter-rouge">docker images</code> komutu ile görüntüleyebiliriz.</p>
 
 <p><code class="highlighter-rouge">docker run {çalıştırmak_istediğimiz_imaj_idsi}</code> komut ile de imajını aldığımız sistemleri Docker Konteynerına koyup çalıştırıyor.
-Hali hazırda çalışan komutları
-<code class="highlighter-rouge">docker ps</code> komutu ile görüntüleyebiliriz.</p>
-
-<p><code class="highlighter-rouge">docker ps -a</code> komutu ile daha önce çalıştırılmış fakat şuanda çalışmayan konteynerları görüntüleyebiliriz.</p>
+Hali hazırda çalışan imajları 
+<code class="highlighter-rouge">docker ps</code> komutu ile görüntüleyebiliriz.
+<code class="highlighter-rouge">docker ps -a</code> komutu ile daha önce çalıştırılmış fakat şuanda çalışmayan konteynerları görüntüleyebiliriz.</p>
 
 <hr />
 
@@ -168,7 +167,7 @@ sunucuda çalışmadığına en az 1 kere şahit olmuşuzdur. Docker sayesinde �
 
 <h3 id="docker-kurulumu">Docker Kurulumu</h3>
 
-<p>Kurumu Linux üzerinden anlatacağım diğer işletim sistemleri için docker dökümantasyonunda ki kurulum adımlarını takip edebilirsiniz.</p>
+<p>Kurulumu Linux üzerinden anlatacağım diğer işletim sistemleri için docker dökümantasyonunda ki kurulum adımlarını takip edebilirsiniz.</p>
 
 <p><a href="https://docs.docker.com/docker-for-windows/install/">Windows</a>   - <a href="https://docs.docker.com/docker-for-mac/install/">Mac</a></p>
 
@@ -240,8 +239,8 @@ docker ps
 <p>Aşığıdakine benzer bir çıktı almalısınız.
 <img src="/assets/posts/1/docker-ps.png" alt="docker ps çıktısı" /></p>
 
-<p>Oluşturduğumuz görüntüyü çalıştırıyoruz.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Oluşturduğumuz görüntüyü(image) çalıştırıyoruz.</span>
+<p>Oluşturduğumuz imajı çalıştırıyoruz.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Oluşturduğumuz imajı(image) çalıştırıyoruz.</span>
 docker run <span class="nt">-p</span> 81:80 oguzcandemircan/nginx:1.0 
 
 <span class="c">#curl istek atıyoruz.</span>
@@ -258,36 +257,42 @@ curl http://localhost:81
 <h3 id="sonuç">Sonuç</h3>
 
 <p>Bu makalede <strong>Docker</strong>, <strong>Dockerfile</strong>, <strong>Docker Image</strong>, <strong>Docker Container</strong> nedir ? Nasıl
-çalışır ? Öğrenmiş olduk. Basit bir örnekle öğrendiklerimizi uygulamaya dökerek pekiştirdik.
-Bir sonraki makele de <strong>Docker Compose</strong> ile oluşturduğumuz konteynerları yönetme konusuna değineceğim. Nedir ? Nasıl çalışır ?</p>
+çalışır ? Öğrenmiş olduk. Basit bir örnekle öğrendiklerimizi uygulamaya dökerek pekiştirdik. 
+4 bölümlük “ yeni nesil geliştirme ortamı “ serisinin 1. bölümünü tamamlamış olduk.
+Bir sonraki bölümde <strong>Docker Compose</strong> ile oluşturduğumuz konteynerları yönetme konusuna değineceğiz.</p>
 
-    </p>
+    </div>
     <div class="tags">
         <ul>
             
-            <li><a href="http://localhost:4000/tags#laradock" title="laradock"><span>laradock</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#laradock" title="laradock"><span>laradock</span></a></li>
             
-            <li><a href="http://localhost:4000/tags#laravel" title="laravel"><span>laravel</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#laravel" title="laravel"><span>laravel</span></a></li>
             
-            <li><a href="http://localhost:4000/tags#software" title="software"><span>software</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#software" title="software"><span>software</span></a></li>
             
-            <li><a href="http://localhost:4000/tags#php" title="php"><span>php</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#php" title="php"><span>php</span></a></li>
             
-            <li><a href="http://localhost:4000/tags#geliştirme ortamı" title="geliştirme ortamı"><span>geliştirme ortamı</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#geliştirme ortamı" title="geliştirme ortamı"><span>geliştirme ortamı</span></a></li>
             
-            <li><a href="http://localhost:4000/tags#yazılım" title="yazılım"><span>yazılım</span></a></li>
+            <li><a href="http://localhost:4000/etiketler#yazılım" title="yazılım"><span>yazılım</span></a></li>
             
         </ul>
     </div>
     <div class="date">
-        <span title="26/03/2018">
+        <span title="26/03/2019">
             26
             
             Mart
-            2018
+            2019
         </span>
     </div>
-    <hr>
+    <div class="post-navigation hr row">
+        
+            <a title="anasayfa" class="prev col" href="http://localhost:4000">&laquo; anasayfa</a>
+        
+        
+    </div>
     <div class="disqus-comments"> <div id="disqus_thread"></div>
 <script>
 
@@ -306,64 +311,12 @@ s.setAttribute('data-timestamp', +new Date());
 </article>
 
 <script>
-function readTime(source, target){
-    var text = document.getElementById(source).innerText;
-    var minutes = Math.floor(text.split(' ').length / 150 )
-    if(minutes === 0) {
-        minutes = 1
-    }
-    document.getElementById(target).innerHTML = minutes + " dk okuma süresi"
-}
-readTime('article', 'time');
+    readTime('article', 'time');
 </script>
-                    <div class="mt-4">© 2018-2019 Oğuzcan Demircan All Rights Reserved</div>
+                    <div class="mt-4">© 2019 Oğuzcan Demircan All Rights Reserved</div>
                 </div>
                 <!-- <div class="col-lg-5" style="position:fixed; right: 0px;">
                     <div class="col-lg-6 float-right">
-                        
-                        <article class="post">
-                            <a href="laravel-broadcasting">
-                                <h2>Laravel Broadcasting</h2>
-                                <img src="/assets/posts/5/main.jpg" alt="Laravel Broadcasting" />
-                                Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz.
-                            </a>
-                            <br>
-                            <br>
-                            <span>30 March 2018</span>
-                        </article>
-                        
-                        <article class="post">
-                            <a href="yeni-nesil-gelistirme-ortami-docker-docker-compose">
-                                <h2>Yeni nesil geliştirme ortamı - 4.bölüm Workspace</h2>
-                                <img src="/assets/posts/4/main.jpg" alt="Yeni nesil geliştirme ortamı - 4.bölüm Workspace" />
-                                Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz.
-                            </a>
-                            <br>
-                            <br>
-                            <span>29 March 2018</span>
-                        </article>
-                        
-                        <article class="post">
-                            <a href="yeni-nesil-gelistirme-ortami-docker-docker-compose">
-                                <h2>Yeni nesil geliştirme ortamı - 3.bölüm Laradock</h2>
-                                <img src="/assets/posts/3/laradock.jpg" alt="Yeni nesil geliştirme ortamı - 3.bölüm Laradock" />
-                                Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz.
-                            </a>
-                            <br>
-                            <br>
-                            <span>28 March 2018</span>
-                        </article>
-                        
-                        <article class="post">
-                            <a href="yeni-nesil-gelistirme-ortami-docker-docker-compose">
-                                <h2>Yeni nesil geliştirme ortamı - 2.bölüm Docker Compose</h2>
-                                <img src="/assets/posts/2/docker-compose.jpg" alt="Yeni nesil geliştirme ortamı - 2.bölüm Docker Compose" />
-                                Bu makale de Docker nedir ? Docker biz geliştiriciler için ne ifade ediyor ? Neden Docker kullanalım ? Dockerı nasıl kullanırız vb. gibi sorulara cevap arıyoruz.
-                            </a>
-                            <br>
-                            <br>
-                            <span>27 March 2018</span>
-                        </article>
                         
                         <article class="post">
                             <a href="yeni-nesil-gelistirme-ortami">
@@ -373,7 +326,7 @@ readTime('article', 'time');
                             </a>
                             <br>
                             <br>
-                            <span>26 March 2018</span>
+                            <span>26 March 2019</span>
                         </article>
                         
                     </div>
@@ -382,14 +335,5 @@ readTime('article', 'time');
         </div>
     </div>
 </main>
-<script>
-var nav = document.getElementsByClassName('sub-nav')[0];
-var cond = nav.getElementsByClassName('active').length;
-if(cond == 0) {
-    var el = document.getElementById('makaleler').setAttribute('class', 'active');
-    console.log(el);
-}
-</script>
-<script src="/assets/js/custom.js"></script>
 </body>
 </html>

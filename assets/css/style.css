@@ -26,6 +26,7 @@ body {
 
 p {
     line-height: 1.7em!important;
+    /* margin-top: 0.5rem!important; */
     /* font-family: medium-content-serif-font, serif !important; */
 }
 
@@ -42,6 +43,13 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
     border-top: 3px dotted var(--open-white) !important;
+    margin-top: 3rem; 
+    margin-bottom: 3rem; 
+}
+
+.hr {
+    border-top: 3px dotted var(--open-white) !important;
+    border-bottom: 3px dotted var(--open-white) !important;
     margin-top: 3rem; 
     margin-bottom: 3rem; 
 }
@@ -340,4 +348,22 @@ ul li {
     -webkit-box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
     -moz-box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
     box-shadow: 9px 9px 5px -10px rgba(227,227,227,1);
+}
+
+/** Post Navigation **/
+.post-navigation {
+    width: auto;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+  
+.post-navigation a {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    padding: 2rem 0;
+}
+  
+.post-navigation .next {
+    text-align: right;
 }

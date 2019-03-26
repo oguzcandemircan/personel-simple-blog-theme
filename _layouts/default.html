@@ -1,12 +1,12 @@
 {% include header.html %}
 <main class="container-fluid h-100">
-    {% if site.loader == true %}
+    {% if site.loader.active == true %}
     <div class="loader-background row">
         <div id='loader'></div>
         <h1>{{ site.loader.text }}</h1>
-    </div>
+    </div>  
     {% endif %}
-    <div class="row">
+    <div class="row" id="wrapper">
        {% include sidebar.html %}
         <div id="content" class="col-lg-9 offset-lg-3">
             <div class="row justify-content-center justify-content-lg-start">
@@ -35,12 +35,4 @@
         </div>
     </div>
 </main>
-<script>
-var nav = document.getElementsByClassName('sub-nav')[0];
-var cond = nav.getElementsByClassName('active').length;
-if(cond == 0) {
-    var el = document.getElementById('makaleler').setAttribute('class', 'active');
-    console.log(el);
-}
-</script>
 {% include footer.html %}
